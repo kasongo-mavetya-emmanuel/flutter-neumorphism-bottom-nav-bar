@@ -48,6 +48,67 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
               );
             }),
           ),
+
+          //app bar
+          Positioned(
+              top: 25,
+              left: 10,
+              right: 10,
+              child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8,vertical: 20),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade200,
+                          offset:Offset(-8.0,-8.0),
+                          //spreadRadius: -1.0,
+                          blurRadius: 15.0,
+                        ),
+
+                        BoxShadow(
+                          color: Colors.grey.shade200,
+                          offset:Offset(8.0,8.0),
+                          //spreadRadius: -1.0,
+                          blurRadius: 15.0,
+                        ),
+                      ]
+                  ),
+                  width: MediaQuery.of(context).size.width,
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Text('CUSTOM BOTTOM NAV BAR',style: TextStyle(fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        foreground: Paint()..color= Colors.grey.withOpacity(0.7),
+                      ),
+                        textAlign: TextAlign.center,),
+
+
+                      Text('CUSTOM BOTTOM NAV BAR',style: TextStyle(fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          foreground: Paint()..strokeWidth=1..color= Colors.black54..style=PaintingStyle.stroke,
+                          //PaintingStyle.stroke..strokeWidth=10..color= Colors.red,
+                          //color: Colors.black12,
+                          shadows: [
+                            // BoxShadow(
+                            //   color: Colors.black87,
+                            //   spreadRadius: 5.0,
+                            // ),
+                            //
+                            // BoxShadow(
+                            //   color: Colors.black54,
+                            //   //offset:Offset(-2.0,-2.0),
+                            //   spreadRadius: 5.0,
+                            //   blurRadius: 20.0,
+                            // )
+
+                          ]),
+                        textAlign: TextAlign.center,),
+                    ],
+                  )
+              )),
           //bottom nav bar
           Positioned(
             bottom: 8,
